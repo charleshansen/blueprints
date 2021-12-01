@@ -13,7 +13,7 @@ folder-namespace       1
 management-namespace   2
 management-project-id  6
 networking-namespace   1
-project-id             18
+instance-project-id             18
 projects-namespace     3
 ```
 
@@ -24,8 +24,8 @@ projects-namespace     3
 ## Resources
 
 ```
-File          APIVersion                                     Kind     Name        Namespace
-project.yaml  resourcemanager.cnrm.cloud.google.com/v1beta1  Project  project-id  projects
+File          APIVersion                                     Kind     Name                 Namespace
+project.yaml  resourcemanager.cnrm.cloud.google.com/v1beta1  Project  instance-project-id  projects
 ```
 
 ## Resource References

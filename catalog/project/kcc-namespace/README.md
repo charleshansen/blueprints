@@ -10,7 +10,7 @@ Setter                 Usages
 management-namespace   2
 management-project-id  6
 networking-namespace   1
-project-id             16
+instance-project-id    16
 projects-namespace     2
 ```
 
@@ -25,7 +25,7 @@ File                       APIVersion                          Kind             
 kcc-namespace-viewer.yaml  rbac.authorization.k8s.io/v1        RoleBinding             cnrm-network-viewer-project-id                     networking
 kcc-namespace-viewer.yaml  rbac.authorization.k8s.io/v1        RoleBinding             cnrm-project-viewer-project-id                     projects
 kcc-project-owner.yaml     iam.cnrm.cloud.google.com/v1beta1   IAMPartialPolicy         kcc-project-id-owners-permissions                  projects
-kcc.yaml                   core.cnrm.cloud.google.com/v1beta1  ConfigConnectorContext  configconnectorcontext.core.cnrm.cloud.google.com  project-id
+kcc.yaml                   core.cnrm.cloud.google.com/v1beta1  ConfigConnectorContext  configconnectorcontext.core.cnrm.cloud.google.com  projects
 kcc.yaml                   iam.cnrm.cloud.google.com/v1beta1   IAMPartialPolicy         project-id-sa-workload-identity-binding            config-control
 kcc.yaml                   iam.cnrm.cloud.google.com/v1beta1   IAMServiceAccount       kcc-project-id                                     config-control
 namespace.yaml             v1                                  Namespace               project-id
