@@ -38,24 +38,6 @@ spec:
   role: roles/resourcemanager.folderAdmin
   member: "serviceAccount:hierarchy-sa@management-project-id.iam.gserviceaccount.com" # kpt-set: serviceAccount:hierarchy-sa@${management-project-id}.iam.gserviceaccount.com
 ---
-apiVersion: iam.cnrm.cloud.google.com/v1beta1
-kind: IAMPartialPolicy
-metadata:
-  name: hierarchy-sa-workload-identity-binding
-  namespace: config-control # kpt-set: ${management-namespace}
-  annotations:
-    cnrm.cloud.google.com/blueprint: cnrm/landing-zone/v0.4.0
-    cnrm.cloud.google.com/project-id: management-project-id # kpt-set: ${management-project-id}
-spec:
-  resourceRef:
-    name: hierarchy-sa
-    apiVersion: iam.cnrm.cloud.google.com/v1beta1
-    kind: IAMServiceAccount
-  bindings:
-    - role: roles/iam.workloadIdentityUser
-      members:
-        - member: serviceAccount:management-project-id.svc.id.goog[cnrm-system/cnrm-controller-manager-hierarchy] # kpt-set: serviceAccount:${management-project-id}.svc.id.goog[cnrm-system/cnrm-controller-manager-hierarchy]
----
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
