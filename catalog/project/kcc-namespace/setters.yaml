@@ -23,4 +23,5 @@ data:
   management-project-id: management-project-id
   networking-namespace: networking
   instance-project-id: project-id
+  instance-project-name: project-name
   projects-namespace: projects
